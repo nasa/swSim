@@ -1,0 +1,61 @@
+# Compiled Source #
+
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages, boxes, or bags #
+
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+
+*.log
+*.sql
+*.sqlite
+
+# Sublime
+*.sublime-project
+*.sublime-workspace
+.project
+*.code-workspace
+
+# OS Files #
+
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Directories #
+
+/bin
+/data
+/old
+#/lib/gtest
+/build
+/.vscode
+
+# Large Data inputs $
+#whitelist test files
+
+*.bin
+!testRotations.bin
+!testExcitation.bin
+*.raw
+!testGeometry.raw
+!testGeometry_planeCounts.raw
+*.vtu
