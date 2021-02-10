@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.19"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Doxygen Comment Example: include/SparseVector.hpp Source File</title>
+<title>swSim: include/SparseVector.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Doxygen Comment Example
+   <div id="projectname">swSim
    &#160;<span id="projectnumber">Version 1.0</span>
    </div>
   </td>
@@ -71,47 +71,60 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="_sparse_vector_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef SWSIM_SPARSE_VECTOR_H</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define SWSIM_SPARSE_VECTOR_H</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;Eigen/Sparse&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;SparseVector_base.hpp&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesw_sim.html">swSim</a>{</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classsw_sim_1_1_sparse_vector.html">   19</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classsw_sim_1_1_sparse_vector.html">SparseVector</a>: <span class="keyword">public</span> SparseVector_base{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classsw_sim_1_1_sparse_vector.html#ae816ff6d185255e3efe2103524620fd8">   21</a></span>&#160;        Eigen::SparseVector&lt;double&gt; <a class="code" href="classsw_sim_1_1_sparse_vector.html#ae816ff6d185255e3efe2103524620fd8">vec</a>; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="classsw_sim_1_1_sparse_vector.html#a1a0f039b214a9dbd237416e5804262eb">SparseVector</a>();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="classsw_sim_1_1_sparse_vector.html#a1a0f039b214a9dbd237416e5804262eb">SparseVector</a>(std::string nm, <span class="keywordtype">int</span> length);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="classsw_sim_1_1_sparse_vector.html#acc111cdc8199f0126657b9ecc9f0f3e8">~SparseVector</a>();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_sparse_vector.html#acb2c8086c62dcb8c9be2ad6a50722126">setName</a>(std::string nm);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        std::string <a class="code" href="classsw_sim_1_1_sparse_vector.html#a622e64997a651f1ddd137e7ba89156d8">getName</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">double</span>* <a class="code" href="classsw_sim_1_1_sparse_vector.html#a8a8f9068f5aa968145b242dff4bee377">getValueArray</a>();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">int</span>* <a class="code" href="classsw_sim_1_1_sparse_vector.html#a4ca69e0d67cf66a2fea294c5f1d5780a">getIndexArray</a>();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">size_t</span> <a class="code" href="classsw_sim_1_1_sparse_vector.html#abdf694e10aa60a0f144c683c5da25280">getNonZeroLength</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">size_t</span> <a class="code" href="classsw_sim_1_1_sparse_vector.html#a55025b3779ead3d7db30da013a1d0168">getFullLength</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_sparse_vector.html#a9d9ad6a813ac1564813a4b075e09051b">update</a>(<span class="keywordtype">int</span> kt);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        std::string name; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">//void (*UpdateSpV)(int);</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    };</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;};</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/*SWSIM_SPARSE_VECTOR_H*/</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// Copyright 2020 United States Government as represented by the Administrator of the National </span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Aeronautics and Space Administration. No copyright is claimed in the United States under </span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// Title 17, U.S. Code. All Other Rights Reserved. See Appendix A for 3rd party licenses.</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// The Solid-Wave Sim (swSIM) platform is licensed under the Apache License, Version 2.0 (the </span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain </span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">// a copy of the License at http://www.apache.org/licenses/LICENSE-2.0. </span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// </span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">// Unless required by applicable law or agreed to in writing, software distributed under the </span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, </span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// either express or implied. See the License for the specific language governing permissions </span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// and limitations under the License.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifndef SWSIM_SPARSE_VECTOR_H</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define SWSIM_SPARSE_VECTOR_H</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;Eigen/Sparse&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;SparseVector_base.hpp&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesw_sim.html">swSim</a>{</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classsw_sim_1_1_sparse_vector.html">   32</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classsw_sim_1_1_sparse_vector.html">SparseVector</a>: <span class="keyword">public</span> SparseVector_base{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classsw_sim_1_1_sparse_vector.html#ae816ff6d185255e3efe2103524620fd8">   34</a></span>&#160;        Eigen::SparseVector&lt;double&gt; <a class="code" href="classsw_sim_1_1_sparse_vector.html#ae816ff6d185255e3efe2103524620fd8">vec</a>; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="classsw_sim_1_1_sparse_vector.html#a1a0f039b214a9dbd237416e5804262eb">SparseVector</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="classsw_sim_1_1_sparse_vector.html#a1a0f039b214a9dbd237416e5804262eb">SparseVector</a>(std::string nm, <span class="keywordtype">int</span> length);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="classsw_sim_1_1_sparse_vector.html#acc111cdc8199f0126657b9ecc9f0f3e8">~SparseVector</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_sparse_vector.html#acb2c8086c62dcb8c9be2ad6a50722126">setName</a>(std::string nm);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        std::string <a class="code" href="classsw_sim_1_1_sparse_vector.html#a622e64997a651f1ddd137e7ba89156d8">getName</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">double</span>* <a class="code" href="classsw_sim_1_1_sparse_vector.html#a8a8f9068f5aa968145b242dff4bee377">getValueArray</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordtype">int</span>* <a class="code" href="classsw_sim_1_1_sparse_vector.html#a4ca69e0d67cf66a2fea294c5f1d5780a">getIndexArray</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordtype">size_t</span> <a class="code" href="classsw_sim_1_1_sparse_vector.html#abdf694e10aa60a0f144c683c5da25280">getNonZeroLength</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordtype">size_t</span> <a class="code" href="classsw_sim_1_1_sparse_vector.html#a55025b3779ead3d7db30da013a1d0168">getFullLength</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_sparse_vector.html#a9d9ad6a813ac1564813a4b075e09051b">update</a>(<span class="keywordtype">int</span> kt);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        std::string name; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="comment">//void (*UpdateSpV)(int);</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    };</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;};</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/*SWSIM_SPARSE_VECTOR_H*/</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclasssw_sim_1_1_sparse_vector_html_ae816ff6d185255e3efe2103524620fd8"><div class="ttname"><a href="classsw_sim_1_1_sparse_vector.html#ae816ff6d185255e3efe2103524620fd8">swSim::SparseVector::vec</a></div><div class="ttdeci">Eigen::SparseVector&lt; double &gt; vec</div><div class="ttdoc">Underlying Vector.</div><div class="ttdef"><b>Definition:</b> SparseVector.hpp:21</div></div>
+<div class="ttc" id="aclasssw_sim_1_1_sparse_vector_html_ae816ff6d185255e3efe2103524620fd8"><div class="ttname"><a href="classsw_sim_1_1_sparse_vector.html#ae816ff6d185255e3efe2103524620fd8">swSim::SparseVector::vec</a></div><div class="ttdeci">Eigen::SparseVector&lt; double &gt; vec</div><div class="ttdoc">Underlying Vector.</div><div class="ttdef"><b>Definition:</b> SparseVector.hpp:34</div></div>
 <div class="ttc" id="aclasssw_sim_1_1_sparse_vector_html_a622e64997a651f1ddd137e7ba89156d8"><div class="ttname"><a href="classsw_sim_1_1_sparse_vector.html#a622e64997a651f1ddd137e7ba89156d8">swSim::SparseVector::getName</a></div><div class="ttdeci">std::string getName() const</div><div class="ttdoc">Get Key-Name for this vector.</div><div class="ttdef"><b>Definition:</b> SparseVector.cpp:19</div></div>
-<div class="ttc" id="aclasssw_sim_1_1_sparse_vector_html"><div class="ttname"><a href="classsw_sim_1_1_sparse_vector.html">swSim::SparseVector</a></div><div class="ttdoc">Defines data structures for providing sparse vectors to KernelComposer.</div><div class="ttdef"><b>Definition:</b> SparseVector.hpp:19</div></div>
+<div class="ttc" id="aclasssw_sim_1_1_sparse_vector_html"><div class="ttname"><a href="classsw_sim_1_1_sparse_vector.html">swSim::SparseVector</a></div><div class="ttdoc">Defines data structures for providing sparse vectors to KernelComposer.</div><div class="ttdef"><b>Definition:</b> SparseVector.hpp:32</div></div>
 <div class="ttc" id="aclasssw_sim_1_1_sparse_vector_html_acc111cdc8199f0126657b9ecc9f0f3e8"><div class="ttname"><a href="classsw_sim_1_1_sparse_vector.html#acc111cdc8199f0126657b9ecc9f0f3e8">swSim::SparseVector::~SparseVector</a></div><div class="ttdeci">~SparseVector()</div><div class="ttdoc">Destroy the SparseVector.</div><div class="ttdef"><b>Definition:</b> SparseVector.cpp:15</div></div>
 <div class="ttc" id="aclasssw_sim_1_1_sparse_vector_html_a9d9ad6a813ac1564813a4b075e09051b"><div class="ttname"><a href="classsw_sim_1_1_sparse_vector.html#a9d9ad6a813ac1564813a4b075e09051b">swSim::SparseVector::update</a></div><div class="ttdeci">void update(int kt)</div><div class="ttdoc">[Deprecated] Update Sparse vector values based on time index</div><div class="ttdef"><b>Definition:</b> SparseVector.cpp:29</div></div>
 <div class="ttc" id="aclasssw_sim_1_1_sparse_vector_html_abdf694e10aa60a0f144c683c5da25280"><div class="ttname"><a href="classsw_sim_1_1_sparse_vector.html#abdf694e10aa60a0f144c683c5da25280">swSim::SparseVector::getNonZeroLength</a></div><div class="ttdeci">size_t getNonZeroLength() const</div><div class="ttdoc">Get length of value array.</div><div class="ttdef"><b>Definition:</b> SparseVector.cpp:25</div></div>
 <div class="ttc" id="aclasssw_sim_1_1_sparse_vector_html_a4ca69e0d67cf66a2fea294c5f1d5780a"><div class="ttname"><a href="classsw_sim_1_1_sparse_vector.html#a4ca69e0d67cf66a2fea294c5f1d5780a">swSim::SparseVector::getIndexArray</a></div><div class="ttdeci">int * getIndexArray()</div><div class="ttdoc">Get pointer to head of index array.</div><div class="ttdef"><b>Definition:</b> SparseVector.cpp:23</div></div>
 <div class="ttc" id="aclasssw_sim_1_1_sparse_vector_html_a8a8f9068f5aa968145b242dff4bee377"><div class="ttname"><a href="classsw_sim_1_1_sparse_vector.html#a8a8f9068f5aa968145b242dff4bee377">swSim::SparseVector::getValueArray</a></div><div class="ttdeci">double * getValueArray()</div><div class="ttdoc">Get pointer to head of value array.</div><div class="ttdef"><b>Definition:</b> SparseVector.cpp:21</div></div>
-<div class="ttc" id="anamespacesw_sim_html"><div class="ttname"><a href="namespacesw_sim.html">swSim</a></div><div class="ttdoc">&quot;DenseVector.hpp&quot; contains the class definition encapsulating the data structure interface for provid...</div><div class="ttdef"><b>Definition:</b> DenseVector.hpp:16</div></div>
+<div class="ttc" id="anamespacesw_sim_html"><div class="ttname"><a href="namespacesw_sim.html">swSim</a></div><div class="ttdoc">&quot;DenseVector.hpp&quot; contains the class definition encapsulating the data structure interface for provid...</div><div class="ttdef"><b>Definition:</b> DenseVector.hpp:29</div></div>
 <div class="ttc" id="aclasssw_sim_1_1_sparse_vector_html_a55025b3779ead3d7db30da013a1d0168"><div class="ttname"><a href="classsw_sim_1_1_sparse_vector.html#a55025b3779ead3d7db30da013a1d0168">swSim::SparseVector::getFullLength</a></div><div class="ttdeci">size_t getFullLength() const</div><div class="ttdoc">Get full length of vector (incl.</div><div class="ttdef"><b>Definition:</b> SparseVector.cpp:27</div></div>
 <div class="ttc" id="aclasssw_sim_1_1_sparse_vector_html_a1a0f039b214a9dbd237416e5804262eb"><div class="ttname"><a href="classsw_sim_1_1_sparse_vector.html#a1a0f039b214a9dbd237416e5804262eb">swSim::SparseVector::SparseVector</a></div><div class="ttdeci">SparseVector()</div><div class="ttdoc">Create the SparseVector.</div><div class="ttdef"><b>Definition:</b> SparseVector.cpp:8</div></div>
 <div class="ttc" id="aclasssw_sim_1_1_sparse_vector_html_acb2c8086c62dcb8c9be2ad6a50722126"><div class="ttname"><a href="classsw_sim_1_1_sparse_vector.html#acb2c8086c62dcb8c9be2ad6a50722126">swSim::SparseVector::setName</a></div><div class="ttdeci">void setName(std::string nm)</div><div class="ttdoc">Set the name of the SparseVector.</div><div class="ttdef"><b>Definition:</b> SparseVector.cpp:17</div></div>

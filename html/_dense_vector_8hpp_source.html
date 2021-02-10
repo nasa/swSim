@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.19"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Doxygen Comment Example: include/DenseVector.hpp Source File</title>
+<title>swSim: include/DenseVector.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Doxygen Comment Example
+   <div id="projectname">swSim
    &#160;<span id="projectnumber">Version 1.0</span>
    </div>
   </td>
@@ -71,60 +71,73 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="_dense_vector_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef SWSIM_DENSE_VECTOR_H</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define SWSIM_DENSE_VECTOR_H</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;mpi.h&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_segmentation_8hpp.html">Segmentation.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;DenseVector_base.hpp&quot;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="namespacesw_sim.html">   16</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesw_sim.html">swSim</a>{</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classsw_sim_1_1_dense_vector.html">   21</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classsw_sim_1_1_dense_vector.html">DenseVector</a>: <span class="keyword">public</span> DenseVector_base{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classsw_sim_1_1_dense_vector.html#affc21ba129f425f9c56adccb92bc0df7">   23</a></span>&#160;        std::vector&lt;double&gt; <a class="code" href="classsw_sim_1_1_dense_vector.html#affc21ba129f425f9c56adccb92bc0df7">vec</a>; </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classsw_sim_1_1_dense_vector.html#a612f84aa20fa0d4b0fa6bc562acb4777">   24</a></span>&#160;        <a class="code" href="classsw_sim_1_1_segmentation.html">swSim::Segmentation</a>* <a class="code" href="classsw_sim_1_1_dense_vector.html#a612f84aa20fa0d4b0fa6bc562acb4777">seg</a>; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="classsw_sim_1_1_dense_vector.html#ac44dfe2711a7541e90967f4457f76731">DenseVector</a>();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="classsw_sim_1_1_dense_vector.html#ac44dfe2711a7541e90967f4457f76731">DenseVector</a>(std::string nm, <span class="keywordtype">int</span> length);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="classsw_sim_1_1_dense_vector.html#a881b79d643957e714fcf2d036ae57850">~DenseVector</a>();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_dense_vector.html#af89c93e83ff4f8240832c01a4e693d1c">setName</a>(std::string nm);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_dense_vector.html#a20d3cd3976d4f4a65587df310353cc1a">setVector</a>(std::vector&lt;double&gt; v);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_dense_vector.html#a20d3cd3976d4f4a65587df310353cc1a">setVector</a>(<span class="keywordtype">double</span>* v, <span class="keywordtype">int</span> length);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        std::string <a class="code" href="classsw_sim_1_1_dense_vector.html#a61e3f959a6e6b7abe7c5aee717d811e2">getName</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">double</span>* <a class="code" href="classsw_sim_1_1_dense_vector.html#afabf48f7bbe3128edd780d0cf774ecb0">getValueArray</a>();</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">size_t</span> <a class="code" href="classsw_sim_1_1_dense_vector.html#a10d55f880fcb22370d41bcc6265db754">getArrayLength</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="comment">//probably should rename these to fit the style guide, but for now, the names work</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment"></span>        DenseVectorError_t <a class="code" href="classsw_sim_1_1_dense_vector.html#ab8a39fccb21d95c5c71f83b6c01c6122">sendrecv_MPI</a>();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        DenseVectorError_t <a class="code" href="classsw_sim_1_1_dense_vector.html#ab8a39fccb21d95c5c71f83b6c01c6122">sendrecv_MPI</a>(<span class="keywordtype">double</span>* DnV_d);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_dense_vector.html#a0ad90da281c1fdfc8d3648c56c24981a">configureSegmentedComms</a>(<a class="code" href="classsw_sim_1_1_segmentation.html">swSim::Segmentation</a> &amp;<a class="code" href="classsw_sim_1_1_dense_vector.html#a612f84aa20fa0d4b0fa6bc562acb4777">seg</a>);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_dense_vector.html#a3766ce12b8c0c8a153e12385e8baf3f9">mpiComm</a>(MPI_Comm comm);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        std::string name; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        MPI_Comm comm; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    };</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;};</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/*SWSIM_DENSE_VECTOR_H*/</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// Copyright 2020 United States Government as represented by the Administrator of the National </span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Aeronautics and Space Administration. No copyright is claimed in the United States under </span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// Title 17, U.S. Code. All Other Rights Reserved. See Appendix A for 3rd party licenses.</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// The Solid-Wave Sim (swSIM) platform is licensed under the Apache License, Version 2.0 (the </span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain </span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">// a copy of the License at http://www.apache.org/licenses/LICENSE-2.0. </span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// </span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">// Unless required by applicable law or agreed to in writing, software distributed under the </span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, </span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// either express or implied. See the License for the specific language governing permissions </span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// and limitations under the License.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifndef SWSIM_DENSE_VECTOR_H</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define SWSIM_DENSE_VECTOR_H</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;mpi.h&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_segmentation_8hpp.html">Segmentation.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;DenseVector_base.hpp&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="namespacesw_sim.html">   29</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesw_sim.html">swSim</a>{</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classsw_sim_1_1_dense_vector.html">   34</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classsw_sim_1_1_dense_vector.html">DenseVector</a>: <span class="keyword">public</span> DenseVector_base{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classsw_sim_1_1_dense_vector.html#affc21ba129f425f9c56adccb92bc0df7">   36</a></span>&#160;        std::vector&lt;double&gt; <a class="code" href="classsw_sim_1_1_dense_vector.html#affc21ba129f425f9c56adccb92bc0df7">vec</a>; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classsw_sim_1_1_dense_vector.html#a612f84aa20fa0d4b0fa6bc562acb4777">   37</a></span>&#160;        <a class="code" href="classsw_sim_1_1_segmentation.html">swSim::Segmentation</a>* <a class="code" href="classsw_sim_1_1_dense_vector.html#a612f84aa20fa0d4b0fa6bc562acb4777">seg</a>; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="classsw_sim_1_1_dense_vector.html#ac44dfe2711a7541e90967f4457f76731">DenseVector</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="classsw_sim_1_1_dense_vector.html#ac44dfe2711a7541e90967f4457f76731">DenseVector</a>(std::string nm, <span class="keywordtype">int</span> length);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="classsw_sim_1_1_dense_vector.html#a881b79d643957e714fcf2d036ae57850">~DenseVector</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_dense_vector.html#af89c93e83ff4f8240832c01a4e693d1c">setName</a>(std::string nm);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_dense_vector.html#a20d3cd3976d4f4a65587df310353cc1a">setVector</a>(std::vector&lt;double&gt; v);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_dense_vector.html#a20d3cd3976d4f4a65587df310353cc1a">setVector</a>(<span class="keywordtype">double</span>* v, <span class="keywordtype">int</span> length);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        std::string <a class="code" href="classsw_sim_1_1_dense_vector.html#a61e3f959a6e6b7abe7c5aee717d811e2">getName</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordtype">double</span>* <a class="code" href="classsw_sim_1_1_dense_vector.html#afabf48f7bbe3128edd780d0cf774ecb0">getValueArray</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordtype">size_t</span> <a class="code" href="classsw_sim_1_1_dense_vector.html#a10d55f880fcb22370d41bcc6265db754">getArrayLength</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="comment">//probably should rename these to fit the style guide, but for now, the names work</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment"></span>        DenseVectorError_t <a class="code" href="classsw_sim_1_1_dense_vector.html#ab8a39fccb21d95c5c71f83b6c01c6122">sendrecv_MPI</a>();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        DenseVectorError_t <a class="code" href="classsw_sim_1_1_dense_vector.html#ab8a39fccb21d95c5c71f83b6c01c6122">sendrecv_MPI</a>(<span class="keywordtype">double</span>* DnV_d);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_dense_vector.html#a0ad90da281c1fdfc8d3648c56c24981a">configureSegmentedComms</a>(<a class="code" href="classsw_sim_1_1_segmentation.html">swSim::Segmentation</a> &amp;<a class="code" href="classsw_sim_1_1_dense_vector.html#a612f84aa20fa0d4b0fa6bc562acb4777">seg</a>);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_dense_vector.html#a3766ce12b8c0c8a153e12385e8baf3f9">mpiComm</a>(MPI_Comm comm);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        std::string name; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        MPI_Comm comm; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    };</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;};</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/*SWSIM_DENSE_VECTOR_H*/</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclasssw_sim_1_1_dense_vector_html_a10d55f880fcb22370d41bcc6265db754"><div class="ttname"><a href="classsw_sim_1_1_dense_vector.html#a10d55f880fcb22370d41bcc6265db754">swSim::DenseVector::getArrayLength</a></div><div class="ttdeci">size_t getArrayLength() const</div><div class="ttdoc">Get length of value array.</div><div class="ttdef"><b>Definition:</b> DenseVector.cpp:25</div></div>
-<div class="ttc" id="aclasssw_sim_1_1_dense_vector_html_af89c93e83ff4f8240832c01a4e693d1c"><div class="ttname"><a href="classsw_sim_1_1_dense_vector.html#af89c93e83ff4f8240832c01a4e693d1c">swSim::DenseVector::setName</a></div><div class="ttdeci">void setName(std::string nm)</div><div class="ttdoc">Set the name of the DenseVector.</div><div class="ttdef"><b>Definition:</b> DenseVector.cpp:66</div></div>
+<div class="ttc" id="aclasssw_sim_1_1_dense_vector_html_af89c93e83ff4f8240832c01a4e693d1c"><div class="ttname"><a href="classsw_sim_1_1_dense_vector.html#af89c93e83ff4f8240832c01a4e693d1c">swSim::DenseVector::setName</a></div><div class="ttdeci">void setName(std::string nm)</div><div class="ttdoc">Set the name of the DenseVector.</div><div class="ttdef"><b>Definition:</b> DenseVector.cpp:63</div></div>
 <div class="ttc" id="aclasssw_sim_1_1_dense_vector_html_a61e3f959a6e6b7abe7c5aee717d811e2"><div class="ttname"><a href="classsw_sim_1_1_dense_vector.html#a61e3f959a6e6b7abe7c5aee717d811e2">swSim::DenseVector::getName</a></div><div class="ttdeci">std::string getName() const</div><div class="ttdoc">Get Key-Name for this vector.</div><div class="ttdef"><b>Definition:</b> DenseVector.cpp:21</div></div>
-<div class="ttc" id="aclasssw_sim_1_1_dense_vector_html"><div class="ttname"><a href="classsw_sim_1_1_dense_vector.html">swSim::DenseVector</a></div><div class="ttdoc">Defines data structures for providing dense vectors to KernelComposer.</div><div class="ttdef"><b>Definition:</b> DenseVector.hpp:21</div></div>
-<div class="ttc" id="aclasssw_sim_1_1_dense_vector_html_a612f84aa20fa0d4b0fa6bc562acb4777"><div class="ttname"><a href="classsw_sim_1_1_dense_vector.html#a612f84aa20fa0d4b0fa6bc562acb4777">swSim::DenseVector::seg</a></div><div class="ttdeci">swSim::Segmentation * seg</div><div class="ttdoc">Segmentation definition fo the vector.</div><div class="ttdef"><b>Definition:</b> DenseVector.hpp:24</div></div>
-<div class="ttc" id="aclasssw_sim_1_1_dense_vector_html_a20d3cd3976d4f4a65587df310353cc1a"><div class="ttname"><a href="classsw_sim_1_1_dense_vector.html#a20d3cd3976d4f4a65587df310353cc1a">swSim::DenseVector::setVector</a></div><div class="ttdeci">void setVector(std::vector&lt; double &gt; v)</div><div class="ttdoc">Make a created vector the underlying vector.</div><div class="ttdef"><b>Definition:</b> DenseVector.cpp:70</div></div>
+<div class="ttc" id="aclasssw_sim_1_1_dense_vector_html"><div class="ttname"><a href="classsw_sim_1_1_dense_vector.html">swSim::DenseVector</a></div><div class="ttdoc">Defines data structures for providing dense vectors to KernelComposer.</div><div class="ttdef"><b>Definition:</b> DenseVector.hpp:34</div></div>
+<div class="ttc" id="aclasssw_sim_1_1_dense_vector_html_a612f84aa20fa0d4b0fa6bc562acb4777"><div class="ttname"><a href="classsw_sim_1_1_dense_vector.html#a612f84aa20fa0d4b0fa6bc562acb4777">swSim::DenseVector::seg</a></div><div class="ttdeci">swSim::Segmentation * seg</div><div class="ttdoc">Segmentation definition fo the vector.</div><div class="ttdef"><b>Definition:</b> DenseVector.hpp:37</div></div>
+<div class="ttc" id="aclasssw_sim_1_1_dense_vector_html_a20d3cd3976d4f4a65587df310353cc1a"><div class="ttname"><a href="classsw_sim_1_1_dense_vector.html#a20d3cd3976d4f4a65587df310353cc1a">swSim::DenseVector::setVector</a></div><div class="ttdeci">void setVector(std::vector&lt; double &gt; v)</div><div class="ttdoc">Make a created vector the underlying vector.</div><div class="ttdef"><b>Definition:</b> DenseVector.cpp:67</div></div>
 <div class="ttc" id="aclasssw_sim_1_1_dense_vector_html_afabf48f7bbe3128edd780d0cf774ecb0"><div class="ttname"><a href="classsw_sim_1_1_dense_vector.html#afabf48f7bbe3128edd780d0cf774ecb0">swSim::DenseVector::getValueArray</a></div><div class="ttdeci">double * getValueArray()</div><div class="ttdoc">Get pointer to head of value array.</div><div class="ttdef"><b>Definition:</b> DenseVector.cpp:23</div></div>
-<div class="ttc" id="aclasssw_sim_1_1_segmentation_html"><div class="ttname"><a href="classsw_sim_1_1_segmentation.html">swSim::Segmentation</a></div><div class="ttdoc">Defines data structures for providing Segmentation object to swSim.</div><div class="ttdef"><b>Definition:</b> Segmentation.hpp:23</div></div>
+<div class="ttc" id="aclasssw_sim_1_1_segmentation_html"><div class="ttname"><a href="classsw_sim_1_1_segmentation.html">swSim::Segmentation</a></div><div class="ttdoc">Defines data structures for providing Segmentation object to swSim.</div><div class="ttdef"><b>Definition:</b> Segmentation.hpp:37</div></div>
 <div class="ttc" id="aclasssw_sim_1_1_dense_vector_html_ab8a39fccb21d95c5c71f83b6c01c6122"><div class="ttname"><a href="classsw_sim_1_1_dense_vector.html#ab8a39fccb21d95c5c71f83b6c01c6122">swSim::DenseVector::sendrecv_MPI</a></div><div class="ttdeci">DenseVectorError_t sendrecv_MPI()</div><div class="ttdoc">Execute halo exchange for this data.</div><div class="ttdef"><b>Definition:</b> DenseVector.cpp:27</div></div>
 <div class="ttc" id="aclasssw_sim_1_1_dense_vector_html_ac44dfe2711a7541e90967f4457f76731"><div class="ttname"><a href="classsw_sim_1_1_dense_vector.html#ac44dfe2711a7541e90967f4457f76731">swSim::DenseVector::DenseVector</a></div><div class="ttdeci">DenseVector()</div><div class="ttdoc">Create the DenseVector.</div><div class="ttdef"><b>Definition:</b> DenseVector.cpp:11</div></div>
-<div class="ttc" id="anamespacesw_sim_html"><div class="ttname"><a href="namespacesw_sim.html">swSim</a></div><div class="ttdoc">&quot;DenseVector.hpp&quot; contains the class definition encapsulating the data structure interface for provid...</div><div class="ttdef"><b>Definition:</b> DenseVector.hpp:16</div></div>
-<div class="ttc" id="aclasssw_sim_1_1_dense_vector_html_a3766ce12b8c0c8a153e12385e8baf3f9"><div class="ttname"><a href="classsw_sim_1_1_dense_vector.html#a3766ce12b8c0c8a153e12385e8baf3f9">swSim::DenseVector::mpiComm</a></div><div class="ttdeci">void mpiComm(MPI_Comm comm)</div><div class="ttdoc">Set the MPI Communicator.</div><div class="ttdef"><b>Definition:</b> DenseVector.cpp:87</div></div>
+<div class="ttc" id="anamespacesw_sim_html"><div class="ttname"><a href="namespacesw_sim.html">swSim</a></div><div class="ttdoc">&quot;DenseVector.hpp&quot; contains the class definition encapsulating the data structure interface for provid...</div><div class="ttdef"><b>Definition:</b> DenseVector.hpp:29</div></div>
+<div class="ttc" id="aclasssw_sim_1_1_dense_vector_html_a3766ce12b8c0c8a153e12385e8baf3f9"><div class="ttname"><a href="classsw_sim_1_1_dense_vector.html#a3766ce12b8c0c8a153e12385e8baf3f9">swSim::DenseVector::mpiComm</a></div><div class="ttdeci">void mpiComm(MPI_Comm comm)</div><div class="ttdoc">Set the MPI Communicator.</div><div class="ttdef"><b>Definition:</b> DenseVector.cpp:84</div></div>
 <div class="ttc" id="aclasssw_sim_1_1_dense_vector_html_a881b79d643957e714fcf2d036ae57850"><div class="ttname"><a href="classsw_sim_1_1_dense_vector.html#a881b79d643957e714fcf2d036ae57850">swSim::DenseVector::~DenseVector</a></div><div class="ttdeci">~DenseVector()</div><div class="ttdoc">Destroy the DenseVector.</div><div class="ttdef"><b>Definition:</b> DenseVector.cpp:19</div></div>
-<div class="ttc" id="aclasssw_sim_1_1_dense_vector_html_a0ad90da281c1fdfc8d3648c56c24981a"><div class="ttname"><a href="classsw_sim_1_1_dense_vector.html#a0ad90da281c1fdfc8d3648c56c24981a">swSim::DenseVector::configureSegmentedComms</a></div><div class="ttdeci">void configureSegmentedComms(swSim::Segmentation &amp;seg)</div><div class="ttdoc">Set the Segmentation.</div><div class="ttdef"><b>Definition:</b> DenseVector.cpp:84</div></div>
-<div class="ttc" id="aclasssw_sim_1_1_dense_vector_html_affc21ba129f425f9c56adccb92bc0df7"><div class="ttname"><a href="classsw_sim_1_1_dense_vector.html#affc21ba129f425f9c56adccb92bc0df7">swSim::DenseVector::vec</a></div><div class="ttdeci">std::vector&lt; double &gt; vec</div><div class="ttdoc">Underlying Vector.</div><div class="ttdef"><b>Definition:</b> DenseVector.hpp:23</div></div>
+<div class="ttc" id="aclasssw_sim_1_1_dense_vector_html_a0ad90da281c1fdfc8d3648c56c24981a"><div class="ttname"><a href="classsw_sim_1_1_dense_vector.html#a0ad90da281c1fdfc8d3648c56c24981a">swSim::DenseVector::configureSegmentedComms</a></div><div class="ttdeci">void configureSegmentedComms(swSim::Segmentation &amp;seg)</div><div class="ttdoc">Set the Segmentation.</div><div class="ttdef"><b>Definition:</b> DenseVector.cpp:81</div></div>
+<div class="ttc" id="aclasssw_sim_1_1_dense_vector_html_affc21ba129f425f9c56adccb92bc0df7"><div class="ttname"><a href="classsw_sim_1_1_dense_vector.html#affc21ba129f425f9c56adccb92bc0df7">swSim::DenseVector::vec</a></div><div class="ttdeci">std::vector&lt; double &gt; vec</div><div class="ttdoc">Underlying Vector.</div><div class="ttdef"><b>Definition:</b> DenseVector.hpp:36</div></div>
 <div class="ttc" id="a_segmentation_8hpp_html"><div class="ttname"><a href="_segmentation_8hpp.html">Segmentation.hpp</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

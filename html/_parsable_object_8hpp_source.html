@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.19"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Doxygen Comment Example: include/ParsableObject.hpp Source File</title>
+<title>swSim: include/ParsableObject.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Doxygen Comment Example
+   <div id="projectname">swSim
    &#160;<span id="projectnumber">Version 1.0</span>
    </div>
   </td>
@@ -71,43 +71,56 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="_parsable_object_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span>  </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;libxml/parser.h&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;libxml/xmlmemory.h&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#ifndef PARSABLEOBJECT_HPP</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="_parsable_object_8hpp.html#a890187f57a6ffa4b06a431e71f4e1ba0">   16</a></span>&#160;<span class="preprocessor">#define PARSABLEOBJECT_HPP</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesw_sim.html">swSim</a>{</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classsw_sim_1_1_parsable_object.html">   23</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classsw_sim_1_1_parsable_object.html">ParsableObject</a> {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_parsable_object.html#a0941e05143256a0be9856fa1a771a29d">ParseSwitch</a>(xmlDocPtr doc, xmlNodePtr cur, <span class="keywordtype">int</span> caseNumber);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_parsable_object.html#a6c188a23bffe6277bfa8789a2e0a5eb1">Parse</a>(xmlDocPtr doc, xmlNodePtr cur); </div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classsw_sim_1_1_parsable_object.html#a850fe67eab5d7c5639fac4732ac2de6b">   33</a></span>&#160;        std::vector&lt;std::string&gt; <a class="code" href="classsw_sim_1_1_parsable_object.html#a850fe67eab5d7c5639fac4732ac2de6b">parseNames</a>; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        xmlNodePtr <a class="code" href="classsw_sim_1_1_parsable_object.html#a866166c753f03b48bc1d96bafa1ec7b4">ParseSearch</a>(xmlDocPtr doc, xmlNodePtr cur, <span class="keyword">const</span> <span class="keywordtype">char</span> *value); </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_parsable_object.html#a3096ac3c2db22ad1eb8025848dfb1d48">Do_parse</a>(xmlDocPtr doc, xmlNodePtr cur, <span class="keywordtype">double</span> *value);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_parsable_object.html#a3096ac3c2db22ad1eb8025848dfb1d48">Do_parse</a>(xmlDocPtr doc, xmlNodePtr cur, <span class="keywordtype">float</span> *value);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_parsable_object.html#a3096ac3c2db22ad1eb8025848dfb1d48">Do_parse</a>(xmlDocPtr doc, xmlNodePtr cur, uint8_t *value);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_parsable_object.html#a3096ac3c2db22ad1eb8025848dfb1d48">Do_parse</a>(xmlDocPtr doc, xmlNodePtr cur, uint32_t *value);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_parsable_object.html#a3096ac3c2db22ad1eb8025848dfb1d48">Do_parse</a>(xmlDocPtr doc, xmlNodePtr cur, uint64_t *value);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_parsable_object.html#a3096ac3c2db22ad1eb8025848dfb1d48">Do_parse</a>(xmlDocPtr doc, xmlNodePtr cur, <span class="keywordtype">bool</span> *value);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_parsable_object.html#a3096ac3c2db22ad1eb8025848dfb1d48">Do_parse</a>(xmlDocPtr doc, xmlNodePtr cur, <span class="keywordtype">char</span> *value);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    };</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;};</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// Copyright 2020 United States Government as represented by the Administrator of the National </span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Aeronautics and Space Administration. No copyright is claimed in the United States under </span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// Title 17, U.S. Code. All Other Rights Reserved. See Appendix A for 3rd party licenses.</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// The Solid-Wave Sim (swSIM) platform is licensed under the Apache License, Version 2.0 (the </span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain </span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">// a copy of the License at http://www.apache.org/licenses/LICENSE-2.0. </span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// </span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">// Unless required by applicable law or agreed to in writing, software distributed under the </span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, </span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// either express or implied. See the License for the specific language governing permissions </span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// and limitations under the License.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span>  </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;libxml/parser.h&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;libxml/xmlmemory.h&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#ifndef PARSABLEOBJECT_HPP</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="_parsable_object_8hpp.html#a890187f57a6ffa4b06a431e71f4e1ba0">   29</a></span>&#160;<span class="preprocessor">#define PARSABLEOBJECT_HPP</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesw_sim.html">swSim</a>{</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classsw_sim_1_1_parsable_object.html">   36</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classsw_sim_1_1_parsable_object.html">ParsableObject</a> {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_parsable_object.html#a0941e05143256a0be9856fa1a771a29d">ParseSwitch</a>(xmlDocPtr doc, xmlNodePtr cur, <span class="keywordtype">int</span> caseNumber);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_parsable_object.html#a6c188a23bffe6277bfa8789a2e0a5eb1">Parse</a>(xmlDocPtr doc, xmlNodePtr cur); </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classsw_sim_1_1_parsable_object.html#a850fe67eab5d7c5639fac4732ac2de6b">   46</a></span>&#160;        std::vector&lt;std::string&gt; <a class="code" href="classsw_sim_1_1_parsable_object.html#a850fe67eab5d7c5639fac4732ac2de6b">parseNames</a>; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        xmlNodePtr <a class="code" href="classsw_sim_1_1_parsable_object.html#a866166c753f03b48bc1d96bafa1ec7b4">ParseSearch</a>(xmlDocPtr doc, xmlNodePtr cur, <span class="keyword">const</span> <span class="keywordtype">char</span> *value); </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_parsable_object.html#a3096ac3c2db22ad1eb8025848dfb1d48">Do_parse</a>(xmlDocPtr doc, xmlNodePtr cur, <span class="keywordtype">double</span> *value);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_parsable_object.html#a3096ac3c2db22ad1eb8025848dfb1d48">Do_parse</a>(xmlDocPtr doc, xmlNodePtr cur, <span class="keywordtype">float</span> *value);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_parsable_object.html#a3096ac3c2db22ad1eb8025848dfb1d48">Do_parse</a>(xmlDocPtr doc, xmlNodePtr cur, uint8_t *value);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_parsable_object.html#a3096ac3c2db22ad1eb8025848dfb1d48">Do_parse</a>(xmlDocPtr doc, xmlNodePtr cur, uint32_t *value);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_parsable_object.html#a3096ac3c2db22ad1eb8025848dfb1d48">Do_parse</a>(xmlDocPtr doc, xmlNodePtr cur, uint64_t *value);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_parsable_object.html#a3096ac3c2db22ad1eb8025848dfb1d48">Do_parse</a>(xmlDocPtr doc, xmlNodePtr cur, <span class="keywordtype">bool</span> *value);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_parsable_object.html#a3096ac3c2db22ad1eb8025848dfb1d48">Do_parse</a>(xmlDocPtr doc, xmlNodePtr cur, <span class="keywordtype">char</span> *value);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    };</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;};</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclasssw_sim_1_1_parsable_object_html_a0941e05143256a0be9856fa1a771a29d"><div class="ttname"><a href="classsw_sim_1_1_parsable_object.html#a0941e05143256a0be9856fa1a771a29d">swSim::ParsableObject::ParseSwitch</a></div><div class="ttdeci">virtual void ParseSwitch(xmlDocPtr doc, xmlNodePtr cur, int caseNumber)</div><div class="ttdoc">Function to help parse the input.</div><div class="ttdef"><b>Definition:</b> ParsableObject.cpp:4</div></div>
 <div class="ttc" id="aclasssw_sim_1_1_parsable_object_html_a866166c753f03b48bc1d96bafa1ec7b4"><div class="ttname"><a href="classsw_sim_1_1_parsable_object.html#a866166c753f03b48bc1d96bafa1ec7b4">swSim::ParsableObject::ParseSearch</a></div><div class="ttdeci">xmlNodePtr ParseSearch(xmlDocPtr doc, xmlNodePtr cur, const char *value)</div><div class="ttdoc">Search to the xml element corespondng to each parsable variable.</div><div class="ttdef"><b>Definition:</b> ParsableObject.cpp:24</div></div>
-<div class="ttc" id="aclasssw_sim_1_1_parsable_object_html_a850fe67eab5d7c5639fac4732ac2de6b"><div class="ttname"><a href="classsw_sim_1_1_parsable_object.html#a850fe67eab5d7c5639fac4732ac2de6b">swSim::ParsableObject::parseNames</a></div><div class="ttdeci">std::vector&lt; std::string &gt; parseNames</div><div class="ttdoc">Vector of parse names to look for when reading inputs.</div><div class="ttdef"><b>Definition:</b> ParsableObject.hpp:33</div></div>
-<div class="ttc" id="anamespacesw_sim_html"><div class="ttname"><a href="namespacesw_sim.html">swSim</a></div><div class="ttdoc">&quot;DenseVector.hpp&quot; contains the class definition encapsulating the data structure interface for provid...</div><div class="ttdef"><b>Definition:</b> DenseVector.hpp:16</div></div>
+<div class="ttc" id="aclasssw_sim_1_1_parsable_object_html_a850fe67eab5d7c5639fac4732ac2de6b"><div class="ttname"><a href="classsw_sim_1_1_parsable_object.html#a850fe67eab5d7c5639fac4732ac2de6b">swSim::ParsableObject::parseNames</a></div><div class="ttdeci">std::vector&lt; std::string &gt; parseNames</div><div class="ttdoc">Vector of parse names to look for when reading inputs.</div><div class="ttdef"><b>Definition:</b> ParsableObject.hpp:46</div></div>
+<div class="ttc" id="anamespacesw_sim_html"><div class="ttname"><a href="namespacesw_sim.html">swSim</a></div><div class="ttdoc">&quot;DenseVector.hpp&quot; contains the class definition encapsulating the data structure interface for provid...</div><div class="ttdef"><b>Definition:</b> DenseVector.hpp:29</div></div>
 <div class="ttc" id="aclasssw_sim_1_1_parsable_object_html_a6c188a23bffe6277bfa8789a2e0a5eb1"><div class="ttname"><a href="classsw_sim_1_1_parsable_object.html#a6c188a23bffe6277bfa8789a2e0a5eb1">swSim::ParsableObject::Parse</a></div><div class="ttdeci">void Parse(xmlDocPtr doc, xmlNodePtr cur)</div><div class="ttdoc">Parse the specific object.</div><div class="ttdef"><b>Definition:</b> ParsableObject.cpp:8</div></div>
-<div class="ttc" id="aclasssw_sim_1_1_parsable_object_html"><div class="ttname"><a href="classsw_sim_1_1_parsable_object.html">swSim::ParsableObject</a></div><div class="ttdoc">Defines data structures for ParsableObject in swSim.</div><div class="ttdef"><b>Definition:</b> ParsableObject.hpp:23</div></div>
+<div class="ttc" id="aclasssw_sim_1_1_parsable_object_html"><div class="ttname"><a href="classsw_sim_1_1_parsable_object.html">swSim::ParsableObject</a></div><div class="ttdoc">Defines data structures for ParsableObject in swSim.</div><div class="ttdef"><b>Definition:</b> ParsableObject.hpp:36</div></div>
 <div class="ttc" id="aclasssw_sim_1_1_parsable_object_html_a3096ac3c2db22ad1eb8025848dfb1d48"><div class="ttname"><a href="classsw_sim_1_1_parsable_object.html#a3096ac3c2db22ad1eb8025848dfb1d48">swSim::ParsableObject::Do_parse</a></div><div class="ttdeci">void Do_parse(xmlDocPtr doc, xmlNodePtr cur, double *value)</div><div class="ttdoc">Parse a double object.</div><div class="ttdef"><b>Definition:</b> ParsableObject.cpp:37</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

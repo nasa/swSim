@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.19"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Doxygen Comment Example: include/SparseMatrix.hpp Source File</title>
+<title>swSim: include/SparseMatrix.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Doxygen Comment Example
+   <div id="projectname">swSim
    &#160;<span id="projectnumber">Version 1.0</span>
    </div>
   </td>
@@ -71,46 +71,59 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="_sparse_matrix_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef SWSIM_SPARSE_MATRIX_H</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define SWSIM_SPARSE_MATRIX_H</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;Eigen/Sparse&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;SparseMatrix_base.hpp&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesw_sim.html">swSim</a>{</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classsw_sim_1_1_sparse_matrix.html">   19</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classsw_sim_1_1_sparse_matrix.html">SparseMatrix</a>: <span class="keyword">public</span> SparseMatrix_base{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classsw_sim_1_1_sparse_matrix.html#a2dd6eeb2dcb75916405653aa66fac7b0">   21</a></span>&#160;        Eigen::SparseMatrix&lt;double,1&gt; <a class="code" href="classsw_sim_1_1_sparse_matrix.html#a2dd6eeb2dcb75916405653aa66fac7b0">mat</a>; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="classsw_sim_1_1_sparse_matrix.html#a62a4b2b12379a999d930a47af842ece6">SparseMatrix</a>();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="classsw_sim_1_1_sparse_matrix.html#a62a4b2b12379a999d930a47af842ece6">SparseMatrix</a>(std::string nm, <span class="keywordtype">int</span> rw, <span class="keywordtype">int</span> col); </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="classsw_sim_1_1_sparse_matrix.html#a9b32f78c8d80be20466e93f987546d03">~SparseMatrix</a>(); </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_sparse_matrix.html#ad8d27bb26b6a0b9c02079ef960808899">setName</a>(std::string nm);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_sparse_matrix.html#ac52ffb8405efe7ec0af087c321495583">setSize</a>(<span class="keywordtype">int</span> rw, <span class="keywordtype">int</span> col);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        std::string <a class="code" href="classsw_sim_1_1_sparse_matrix.html#a709675a0045e617ea5d108f97585c279">getName</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">size_t</span> <a class="code" href="classsw_sim_1_1_sparse_matrix.html#a69f0530879732c1fd49f8f5bc362443a">getNonZeroLength</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">double</span>* <a class="code" href="classsw_sim_1_1_sparse_matrix.html#aa24da506ec2fb6b8766db34b4c35a1a3">getValueArray</a>();</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">int</span>* <a class="code" href="classsw_sim_1_1_sparse_matrix.html#a3a28ab09340b5122688dafbe5c35172c">getColumnIndexArray</a>();</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">int</span>* <a class="code" href="classsw_sim_1_1_sparse_matrix.html#aa522fcf024b9710294da19c1a44d54b9">getRowpointerArray</a>();</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordtype">size_t</span> <a class="code" href="classsw_sim_1_1_sparse_matrix.html#a7131cf92c6be6f42d62be5d245c7461c">getRowpointerLength</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classsw_sim_1_1_sparse_matrix.html#ad76c97dbbf68910c723f64d124089493">getRowCount</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classsw_sim_1_1_sparse_matrix.html#add76886667b6cfc221b3c964100b22ef">getColumnCount</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_sparse_matrix.html#a978da04f157c21bd1d9423503a9686d6">SetValue</a>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j, <span class="keywordtype">double</span> val);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classsw_sim_1_1_sparse_matrix.html#a62e137058bc5e4e50d9837c6787d8b34">GetValue</a>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_sparse_matrix.html#aac04a78f2d2d5381770665162fa461c2">AddValue</a>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j, <span class="keywordtype">double</span> val);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_sparse_matrix.html#ab06c883b0de8921aabc5c6da11f1ce3a">Prune</a>();</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        std::string name;  </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    };</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;};</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/*SWSIM_SPARSE_MATRIX_H*/</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// Copyright 2020 United States Government as represented by the Administrator of the National </span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Aeronautics and Space Administration. No copyright is claimed in the United States under </span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// Title 17, U.S. Code. All Other Rights Reserved. See Appendix A for 3rd party licenses.</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// The Solid-Wave Sim (swSIM) platform is licensed under the Apache License, Version 2.0 (the </span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain </span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">// a copy of the License at http://www.apache.org/licenses/LICENSE-2.0. </span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// </span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">// Unless required by applicable law or agreed to in writing, software distributed under the </span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, </span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// either express or implied. See the License for the specific language governing permissions </span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// and limitations under the License.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifndef SWSIM_SPARSE_MATRIX_H</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define SWSIM_SPARSE_MATRIX_H</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;Eigen/Sparse&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;SparseMatrix_base.hpp&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesw_sim.html">swSim</a>{</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classsw_sim_1_1_sparse_matrix.html">   32</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classsw_sim_1_1_sparse_matrix.html">SparseMatrix</a>: <span class="keyword">public</span> SparseMatrix_base{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classsw_sim_1_1_sparse_matrix.html#a2dd6eeb2dcb75916405653aa66fac7b0">   34</a></span>&#160;        Eigen::SparseMatrix&lt;double,1&gt; <a class="code" href="classsw_sim_1_1_sparse_matrix.html#a2dd6eeb2dcb75916405653aa66fac7b0">mat</a>; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="classsw_sim_1_1_sparse_matrix.html#a62a4b2b12379a999d930a47af842ece6">SparseMatrix</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="classsw_sim_1_1_sparse_matrix.html#a62a4b2b12379a999d930a47af842ece6">SparseMatrix</a>(std::string nm, <span class="keywordtype">int</span> rw, <span class="keywordtype">int</span> col); </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="classsw_sim_1_1_sparse_matrix.html#a9b32f78c8d80be20466e93f987546d03">~SparseMatrix</a>(); </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_sparse_matrix.html#ad8d27bb26b6a0b9c02079ef960808899">setName</a>(std::string nm);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_sparse_matrix.html#ac52ffb8405efe7ec0af087c321495583">setSize</a>(<span class="keywordtype">int</span> rw, <span class="keywordtype">int</span> col);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        std::string <a class="code" href="classsw_sim_1_1_sparse_matrix.html#a709675a0045e617ea5d108f97585c279">getName</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">size_t</span> <a class="code" href="classsw_sim_1_1_sparse_matrix.html#a69f0530879732c1fd49f8f5bc362443a">getNonZeroLength</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordtype">double</span>* <a class="code" href="classsw_sim_1_1_sparse_matrix.html#aa24da506ec2fb6b8766db34b4c35a1a3">getValueArray</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordtype">int</span>* <a class="code" href="classsw_sim_1_1_sparse_matrix.html#a3a28ab09340b5122688dafbe5c35172c">getColumnIndexArray</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordtype">int</span>* <a class="code" href="classsw_sim_1_1_sparse_matrix.html#aa522fcf024b9710294da19c1a44d54b9">getRowpointerArray</a>();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">size_t</span> <a class="code" href="classsw_sim_1_1_sparse_matrix.html#a7131cf92c6be6f42d62be5d245c7461c">getRowpointerLength</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classsw_sim_1_1_sparse_matrix.html#ad76c97dbbf68910c723f64d124089493">getRowCount</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classsw_sim_1_1_sparse_matrix.html#add76886667b6cfc221b3c964100b22ef">getColumnCount</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_sparse_matrix.html#a978da04f157c21bd1d9423503a9686d6">SetValue</a>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j, <span class="keywordtype">double</span> val);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classsw_sim_1_1_sparse_matrix.html#a62e137058bc5e4e50d9837c6787d8b34">GetValue</a>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_sparse_matrix.html#aac04a78f2d2d5381770665162fa461c2">AddValue</a>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j, <span class="keywordtype">double</span> val);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsw_sim_1_1_sparse_matrix.html#ab06c883b0de8921aabc5c6da11f1ce3a">Prune</a>();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        std::string name;  </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    };</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;};</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/*SWSIM_SPARSE_MATRIX_H*/</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclasssw_sim_1_1_sparse_matrix_html_a3a28ab09340b5122688dafbe5c35172c"><div class="ttname"><a href="classsw_sim_1_1_sparse_matrix.html#a3a28ab09340b5122688dafbe5c35172c">swSim::SparseMatrix::getColumnIndexArray</a></div><div class="ttdeci">int * getColumnIndexArray()</div><div class="ttdoc">Get pointer to head of column index array.</div><div class="ttdef"><b>Definition:</b> SparseMatrix.cpp:21</div></div>
-<div class="ttc" id="aclasssw_sim_1_1_sparse_matrix_html"><div class="ttname"><a href="classsw_sim_1_1_sparse_matrix.html">swSim::SparseMatrix</a></div><div class="ttdoc">Defines data structures for providing sparse matrices to KernelComposer.</div><div class="ttdef"><b>Definition:</b> SparseMatrix.hpp:19</div></div>
+<div class="ttc" id="aclasssw_sim_1_1_sparse_matrix_html"><div class="ttname"><a href="classsw_sim_1_1_sparse_matrix.html">swSim::SparseMatrix</a></div><div class="ttdoc">Defines data structures for providing sparse matrices to KernelComposer.</div><div class="ttdef"><b>Definition:</b> SparseMatrix.hpp:32</div></div>
 <div class="ttc" id="aclasssw_sim_1_1_sparse_matrix_html_ad76c97dbbf68910c723f64d124089493"><div class="ttname"><a href="classsw_sim_1_1_sparse_matrix.html#ad76c97dbbf68910c723f64d124089493">swSim::SparseMatrix::getRowCount</a></div><div class="ttdeci">int getRowCount() const</div><div class="ttdoc">Get row dimension of the matrix.</div><div class="ttdef"><b>Definition:</b> SparseMatrix.cpp:24</div></div>
 <div class="ttc" id="aclasssw_sim_1_1_sparse_matrix_html_aa24da506ec2fb6b8766db34b4c35a1a3"><div class="ttname"><a href="classsw_sim_1_1_sparse_matrix.html#aa24da506ec2fb6b8766db34b4c35a1a3">swSim::SparseMatrix::getValueArray</a></div><div class="ttdeci">double * getValueArray()</div><div class="ttdoc">Get pointer to head of value array.</div><div class="ttdef"><b>Definition:</b> SparseMatrix.cpp:20</div></div>
 <div class="ttc" id="aclasssw_sim_1_1_sparse_matrix_html_ac52ffb8405efe7ec0af087c321495583"><div class="ttname"><a href="classsw_sim_1_1_sparse_matrix.html#ac52ffb8405efe7ec0af087c321495583">swSim::SparseMatrix::setSize</a></div><div class="ttdeci">void setSize(int rw, int col)</div><div class="ttdoc">Resize this matrix.</div><div class="ttdef"><b>Definition:</b> SparseMatrix.cpp:16</div></div>
@@ -118,8 +131,8 @@ $(function() {
 <div class="ttc" id="aclasssw_sim_1_1_sparse_matrix_html_ad8d27bb26b6a0b9c02079ef960808899"><div class="ttname"><a href="classsw_sim_1_1_sparse_matrix.html#ad8d27bb26b6a0b9c02079ef960808899">swSim::SparseMatrix::setName</a></div><div class="ttdeci">void setName(std::string nm)</div><div class="ttdoc">Set the name of the SparseMatrix.</div><div class="ttdef"><b>Definition:</b> SparseMatrix.cpp:15</div></div>
 <div class="ttc" id="aclasssw_sim_1_1_sparse_matrix_html_aac04a78f2d2d5381770665162fa461c2"><div class="ttname"><a href="classsw_sim_1_1_sparse_matrix.html#aac04a78f2d2d5381770665162fa461c2">swSim::SparseMatrix::AddValue</a></div><div class="ttdeci">void AddValue(int i, int j, double val)</div><div class="ttdoc">Add to the value at row i and column j.</div><div class="ttdef"><b>Definition:</b> SparseMatrix.cpp:35</div></div>
 <div class="ttc" id="aclasssw_sim_1_1_sparse_matrix_html_add76886667b6cfc221b3c964100b22ef"><div class="ttname"><a href="classsw_sim_1_1_sparse_matrix.html#add76886667b6cfc221b3c964100b22ef">swSim::SparseMatrix::getColumnCount</a></div><div class="ttdeci">int getColumnCount() const</div><div class="ttdoc">Get column dimension of the matrix.</div><div class="ttdef"><b>Definition:</b> SparseMatrix.cpp:25</div></div>
-<div class="ttc" id="aclasssw_sim_1_1_sparse_matrix_html_a2dd6eeb2dcb75916405653aa66fac7b0"><div class="ttname"><a href="classsw_sim_1_1_sparse_matrix.html#a2dd6eeb2dcb75916405653aa66fac7b0">swSim::SparseMatrix::mat</a></div><div class="ttdeci">Eigen::SparseMatrix&lt; double, 1 &gt; mat</div><div class="ttdoc">Underlying Matrix.</div><div class="ttdef"><b>Definition:</b> SparseMatrix.hpp:21</div></div>
-<div class="ttc" id="anamespacesw_sim_html"><div class="ttname"><a href="namespacesw_sim.html">swSim</a></div><div class="ttdoc">&quot;DenseVector.hpp&quot; contains the class definition encapsulating the data structure interface for provid...</div><div class="ttdef"><b>Definition:</b> DenseVector.hpp:16</div></div>
+<div class="ttc" id="aclasssw_sim_1_1_sparse_matrix_html_a2dd6eeb2dcb75916405653aa66fac7b0"><div class="ttname"><a href="classsw_sim_1_1_sparse_matrix.html#a2dd6eeb2dcb75916405653aa66fac7b0">swSim::SparseMatrix::mat</a></div><div class="ttdeci">Eigen::SparseMatrix&lt; double, 1 &gt; mat</div><div class="ttdoc">Underlying Matrix.</div><div class="ttdef"><b>Definition:</b> SparseMatrix.hpp:34</div></div>
+<div class="ttc" id="anamespacesw_sim_html"><div class="ttname"><a href="namespacesw_sim.html">swSim</a></div><div class="ttdoc">&quot;DenseVector.hpp&quot; contains the class definition encapsulating the data structure interface for provid...</div><div class="ttdef"><b>Definition:</b> DenseVector.hpp:29</div></div>
 <div class="ttc" id="aclasssw_sim_1_1_sparse_matrix_html_a62e137058bc5e4e50d9837c6787d8b34"><div class="ttname"><a href="classsw_sim_1_1_sparse_matrix.html#a62e137058bc5e4e50d9837c6787d8b34">swSim::SparseMatrix::GetValue</a></div><div class="ttdeci">double GetValue(int i, int j)</div><div class="ttdoc">Get the value at row i and column j.</div><div class="ttdef"><b>Definition:</b> SparseMatrix.cpp:33</div></div>
 <div class="ttc" id="aclasssw_sim_1_1_sparse_matrix_html_ab06c883b0de8921aabc5c6da11f1ce3a"><div class="ttname"><a href="classsw_sim_1_1_sparse_matrix.html#ab06c883b0de8921aabc5c6da11f1ce3a">swSim::SparseMatrix::Prune</a></div><div class="ttdeci">void Prune()</div><div class="ttdoc">Prune Zero values.</div><div class="ttdef"><b>Definition:</b> SparseMatrix.cpp:40</div></div>
 <div class="ttc" id="aclasssw_sim_1_1_sparse_matrix_html_aa522fcf024b9710294da19c1a44d54b9"><div class="ttname"><a href="classsw_sim_1_1_sparse_matrix.html#aa522fcf024b9710294da19c1a44d54b9">swSim::SparseMatrix::getRowpointerArray</a></div><div class="ttdeci">int * getRowpointerArray()</div><div class="ttdoc">Get pointer to head of rowpointer array.</div><div class="ttdef"><b>Definition:</b> SparseMatrix.cpp:22</div></div>
