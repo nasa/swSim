@@ -31,9 +31,9 @@ Redistribution and use in source and binary forms, with or without modification,
 * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
 * Neither the name of Google Inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
 
-Description:
+# Documentation
 
-Solid Wave Sim (swSim) is a tool for simulating elastic waves in solid materials.  It provides tools for creating and placing transducers. 
+Available at https://nasa.github.io/swSim/
 
 # Building swSim
 1. Download latest release
