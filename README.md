@@ -43,6 +43,7 @@ Available at https://nasa.github.io/swSim/
   - gcc >= 7.3
   - cmake >= 3.13.5
   - libxml2 >-2.9.10
+  - cuda >= 10.1
 3. Ensure Python3 is installed for some included post processing utilities
   - this is optional, if the utilities are not desired
 4. cd to `swSimroot/directory`
